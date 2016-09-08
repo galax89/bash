@@ -1,0 +1,11 @@
+
+
+
+du -h --max-depth=1 | sort -r -h -u | head -n5
+du -h --max-depth=1 | sort -r -h -u | head -n5 2> /dev/null
+cd / | du -h --max-depth=1 | sort -r -h -u | head -n5 2> /dev/null
+
+ping -c10 8.8.8.8 | cut -d"/" -f5
+
+
+

@@ -1,0 +1,28 @@
+#!/bin/bash
+chmod 755 explorateur.sh
+
+ls -l >> resultats.ls
+#stock nom file
+cat resultats.ls |
+while read line
+do
+	echo $line | cut -d" " -f9 >> resul.txt
+done
+
+
+#stock types
+cat resul.txt |
+while read line
+do	
+	nom=$line
+	file $nom 2>/dev/null
+done
+
+
+#-------------------------------
+
+
+rm resultats.ls
+rm resul.txt
+
+
