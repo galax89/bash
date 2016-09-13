@@ -24,7 +24,7 @@ do
 	droits=$(echo $chmod | cut -c2-4)
 	dossier=$(echo $chmod | cut -c1)
 
-	#On déclare un  tableau associatif, on va s'en servir comme d'un tableau à 2 dimensions. Droits porssibles + affichage en français
+	#On déclare un  tableau associatif, on va s'en servir comme d'un tableau à 2 dimensions. Droits possibles + affichage en français
 	declare -A tableau_droits
 	tableau_droits=([---]='rien du tout pour vous, dommage ...' [--x]='éxécution' [-w-]='écriture' [-wx]='écriture et éxécution' [r--]='lecture' [r-x]='lecture et éxécution' [rw-]='lecture et écriture' [rwx]='lecture, écriture et éxecution')
 
