@@ -1,0 +1,4 @@
+digraph toto {
+    a -> b -> c;
+    b -> d;
+}
